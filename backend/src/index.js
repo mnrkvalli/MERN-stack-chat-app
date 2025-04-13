@@ -30,7 +30,7 @@ if(process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname, '../frontend/dist')))
 
 
-    app.get('*', (request, response) => {
+    app.get('/*path', (request, response) => {
         response.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
     })
 }
